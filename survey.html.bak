@@ -47,8 +47,6 @@
         /* Page 1 - Welcome */
         #page1 {
             background-color: #BCAF8A;
-            position: relative;
-            padding-bottom: 120px; /* Space for footer */
         }
 
         #page1 .content {
@@ -59,13 +57,12 @@
             align-items: flex-end;
             padding: 40px 50px;
             text-align: right;
-            min-height: calc(100vh - 120px); /* Account for footer height */
         }
 
         #page1 .subtitle {
             color: #7c6f56;
-            font-size: 2rem;
-            font-weight: 400;
+            font-size: 20px;
+            font-weight: 200;
             margin-bottom: 15px;
             letter-spacing: 2px;
         }
@@ -73,7 +70,7 @@
         #page1 h1 {
             color: #4A4A4A;
             font-size: 48px;
-            font-weight: 900;
+            font-weight: 700;
             line-height: 1.3;
             margin-bottom: 40px;
             text-transform: uppercase;
@@ -82,7 +79,6 @@
         #page1 .description {
             color: #4A4A4A;
             font-size: 18px;
-            font-weight: 100;
             line-height: 1.6;
             margin-bottom: 60px;
             max-width: 300px;
@@ -96,7 +92,7 @@
             min-height: 80px;
             padding: 18px 80px;
             font-size: 24px;
-            font-weight: 700;
+            font-weight: 400;
             letter-spacing: 2px;
             cursor: pointer;
             transition: all 0.3s;
@@ -130,12 +126,6 @@
             background-color: #2C2C2C;
             color: #B8A965;
             padding: 40px;
-            margin: 0;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            text-align: center;
         }
 
         /* Pages 2-4 - Form pages */
@@ -143,8 +133,7 @@
             background-color: #fffef9;
             flex: 1;
             flex-direction: column;
-            position: relative;
-            padding-bottom: 120px; /* Space for fixed footer */
+            margin: 0 20px;
         }
         
         .form-page.active {
@@ -152,9 +141,9 @@
         }
 
         .form-container {
-            margin-top: 80px;
+            margin-top: 60px;
             flex: 1;
-            padding: 30px 40px;
+            padding: 30px 20px;
             overflow-y: auto;
             justify-content: flex-end;
             align-items: flex-end;
@@ -168,18 +157,6 @@
             margin-bottom: 30px;
             text-align: right;
             letter-spacing: 2px;
-            position: relative;
-        }
-        
-        .page-number {
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-family: 'Barlow Semi Condensed', sans-serif;
-            color: #7c6f56;
-            font-size: 24px;
-            font-weight: 300;
-            letter-spacing: 2px;
         }
 
         .form-group {
@@ -188,13 +165,11 @@
 
         label {
             display: block;
-            color: #444444a3;
+            color: #444444;
             font-size: 20px;
             font-weight: 200;
-            margin-top: 26px;
-            margin-bottom: 26px;
+            margin-bottom: 8px;
             letter-spacing: 0.5px;
-            line-height: 1.3;
         }
 
         input[type="text"],
@@ -210,7 +185,7 @@
             transition: border-color 0.3s;
             font-style: italic;
             letter-spacing: 0.5px;
-            color: #4d4a3f45;
+            color: #4d4a3f;
         }
 
         input[type="text"]:focus,
@@ -250,7 +225,7 @@
         }
 
         .rating-item {
-            margin-top: 35px;
+            padding: 15px;
             margin-bottom: 15px;
             border-radius: 4px;
         }
@@ -367,9 +342,8 @@
 
         .radio-group {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: -10px;
+            gap: 30px;
+            margin-top: 10px;
         }
 
         .radio-group label {
@@ -377,45 +351,15 @@
             align-items: center;
             font-weight: normal;
             margin-bottom: 0;
-            padding: 12px 15px;
-            border: 2px solid #BCAF8A;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-            position: relative;
         }
 
         .radio-group input[type="radio"] {
-            display: none;
-        }
-        
-        .radio-group label::before {
-            content: '';
-            width: 20px;
-            height: 20px;
-            border: 2px solid #BCAF8A;
-            border-radius: 50%;
-            margin-right: 10px;
-            transition: all 0.3s;
-        }
-        
-        .radio-group input[type="radio"]:checked + label {
-            background-color: #BCAF8A;
-            color: white;
-        }
-        
-        .radio-group input[type="radio"]:checked + label::before {
-            background-color: white;
-            border-color: white;
+            margin-right: 8px;
         }
 
         textarea {
             resize: vertical;
             min-height: 100px;
-        }
-        
-        textarea::placeholder {
-            opacity: 0.5;
         }
 
         .button-container {
@@ -423,7 +367,7 @@
             flex-direction: column;
             gap: 15px;
             margin-top: 30px;
-            padding: 0 40px 30px;
+            padding: 0 20px 30px;
         }
 
         button {
@@ -469,103 +413,56 @@
         /* Page 5 - Thank you */
         #page5 {
             background-color: #BCAF8A;
-            position: relative;
+            text-align: right;
+            padding: 40px 20px;
         }
 
         #page5.active {
             display: flex;
+            justify-content: space-evenly;
+            align-items: stretch;
+            align-content: flex-end;
+            flex-wrap: wrap;
             flex-direction: column;
-        }
-
-        #page5 .subtitle5 {
-            color: #7c6f56;
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
-            font-family: 'Barlow Semi Condensed', sans-serif;
-        }
-        
-        #page5 .content-wrapper {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-            text-align: right;
-            padding: 0px 50px;
-        }
-        
-        #page5 .subtitle {
-            color: rgba(44, 44, 44, 0.5);
-            font-size: 24px;
-            letter-spacing: 4px;
-            margin-bottom: 20px;
         }
 
         #page5 h1 {
-            color: #4A4A4A;
+            color: #2C2C2C;
             text-transform: uppercase;
-            font-size: 72px;
-            font-weight: 900;
-            margin-bottom: 30px;
+            font-size: 64px;
+            margin-bottom: 20px;
         }
 
-        #page5 .description {
-            color: #4A4A4A;
-            font-size: 18px;
-            line-height: 1.6;
-            font-weight: 100;
-            max-width: 400px;
-            margin-bottom: 120px;
-            width: 90%;
+        #page5 p {
+            color: #2c2c2c91;
+            font-size: 20px;
+            margin-bottom: 40px;
         }
 
         #page5 .btn-restart {
             background-color: rgba(74, 74, 74, 0.2);
             color: #4A4A4A;
             border: none;
-            max-height: 110px;
-            padding: 20px 60px;
+            max-height: 100px;
+            min-height: 80px;
+            padding: 18px 80px;
             font-size: 24px;
-            font-weight: 700;
-            letter-spacing: 3px;
+            font-weight: 400;
+            letter-spacing: 2px;
             cursor: pointer;
             transition: all 0.3s;
             text-transform: uppercase;
-            margin-bottom: 40px;
         }
 
         #page5 .btn-restart:hover {
-            background-color: rgba(74, 74, 74, 0.3);
+            background-color: #f5f5f5;
             transform: translateY(-2px);
-        }
-        
-        #page5 .protected {
-            color: rgba(44, 44, 44, 0.5);
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            width: 100%;
-            flex-direction: center;
-            justify-content: center;
-        }
-        
-        #page5 .protected::before {
-            content: '🛡';
-            font-size: 16px;
         }
 
         .form-footer {
             background-color: #2C2C2C;
             color: #B8A965;
             padding: 40px;
-            margin: 0;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
         }
 
         .form-footer img {
@@ -608,7 +505,7 @@
     <!-- Page 2: Personal Information -->
     <div class="page form-page" id="page2">
         <div class="form-container">
-            <h2><span class="page-number">1/3</span>Información <br> Personal</h2>
+            <h2>Información <br> Personal</h2>
             <form id="personalForm">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
@@ -642,19 +539,16 @@
     <!-- Page 3: Agent Evaluation -->
     <div class="page form-page" id="page3">
         <div class="form-container">
-            <h2><span class="page-number">2/3</span>Evaluación <br> del Asesor</h2>
+            <h2>Evaluación <br> del Asesor</h2>
             <form id="evaluationForm">
                 <div class="form-group">
                     <label for="nombreAsesor">Nombre del Asesor *</label>
-                    <select id="nombreAsesor" name="nombreAsesor" required>
-                        <option value="">Seleccione un asesor</option>
-                        <!-- Options will be populated from API -->
-                    </select>
-                    <span class="error" id="asesorError">Por favor seleccione un asesor</span>
+                    <input type="text" id="nombreAsesor" name="nombreAsesor" required>
+                    <span class="error" id="asesorError">Por favor ingrese el nombre del asesor</span>
                 </div>
                 
                 <div class="rating-section">
-                    <label>Por favor califique del 1 al 5 los siguientes aspectos:</label>
+                    <h3>Por favor califique del 1 al 5 los siguientes aspectos:</h3>
                     
                     <div class="rating-item">
                         <span class="rating-label">Efectividad y regularidad en la comunicación</span>
@@ -675,7 +569,6 @@
 
                     <div class="rating-item">
                         <span class="rating-label">Asesoría legal, fiscal y financiera</span>
-                        <div class="rating-scale"><span class="rating-scale-line"></span></div>
                         <div class="rating-buttons">
                             <input type="radio" id="profesionalismo1" name="profesionalismo" value="1">
                             <label for="profesionalismo1">1</label>
@@ -692,7 +585,6 @@
 
                     <div class="rating-item">
                         <span class="rating-label">Nivel de conocimiento o del negocio inmobiliario</span>
-                        <div class="rating-scale"><span class="rating-scale-line"></span></div>
                         <div class="rating-buttons">
                             <input type="radio" id="comunicacion1" name="comunicacion" value="1">
                             <label for="comunicacion1">1</label>
@@ -709,7 +601,6 @@
 
                     <div class="rating-item">
                         <span class="rating-label">Presentación personal e imagen</span>
-                        <div class="rating-scale"><span class="rating-scale-line"></span></div>
                         <div class="rating-buttons">
                             <input type="radio" id="disponibilidad1" name="disponibilidad" value="1">
                             <label for="disponibilidad1">1</label>
@@ -726,7 +617,6 @@
 
                     <div class="rating-item">
                         <span class="rating-label">Manejo de los detalles</span>
-                        <div class="rating-scale"><span class="rating-scale-line"></span></div>
                         <div class="rating-buttons">
                             <input type="radio" id="asesoria1" name="asesoria" value="1">
                             <label for="asesoria1">1</label>
@@ -743,7 +633,6 @@
 
                     <div class="rating-item">
                         <span class="rating-label">Puntualidad</span>
-                        <div class="rating-scale"><span class="rating-scale-line"></span></div>
                         <div class="rating-buttons">
                             <input type="radio" id="negociacion1" name="negociacion" value="1">
                             <label for="negociacion1">1</label>
@@ -760,7 +649,6 @@
 
                     <div class="rating-item">
                         <span class="rating-label">Nivel de compromiso en el servicio</span>
-                        <div class="rating-scale"><span class="rating-scale-line"></span></div>
                         <div class="rating-buttons">
                             <input type="radio" id="honestidad1" name="honestidad" value="1">
                             <label for="honestidad1">1</label>
@@ -777,7 +665,6 @@
 
                     <div class="rating-item">
                         <span class="rating-label">Solución de problemas</span>
-                        <div class="rating-scale"><span class="rating-scale-line"></span></div>
                         <div class="rating-buttons">
                             <input type="radio" id="presentacion1" name="presentacion" value="1">
                             <label for="presentacion1">1</label>
@@ -794,7 +681,6 @@
 
                     <div class="rating-item">
                         <span class="rating-label">Acompañamiento de inicio a fin</span>
-                        <div class="rating-scale"><span class="rating-scale-line"></span></div>
                         <div class="rating-buttons">
                             <input type="radio" id="seguimiento1" name="seguimiento" value="1">
                             <label for="seguimiento1">1</label>
@@ -811,7 +697,6 @@
 
                     <div class="rating-item">
                         <span class="rating-label">Manejo de situaciones imprevistas</span>
-                        <div class="rating-scale"><span class="rating-scale-line"></span></div>
                         <div class="rating-buttons">
                             <input type="radio" id="puntualidad1" name="puntualidad" value="1">
                             <label for="puntualidad1">1</label>
@@ -828,7 +713,6 @@
 
                     <div class="rating-item">
                         <span class="rating-label">Manejo de los tiempos de la negociación Fila</span>
-                        <div class="rating-scale"><span class="rating-scale-line"></span></div>
                         <div class="rating-buttons">
                             <input type="radio" id="calidad1" name="calidad" value="1">
                             <label for="calidad1">1</label>
@@ -843,22 +727,22 @@
                         </div>
                     </div>
                 </div>
-                <span class="error" id="ratingsError" style="text-align: center;">Por favor califique todos los aspectos</span>
+                <span class="error" id="ratingsError" style="text-align: center; display: block;">Por favor califique todos los aspectos</span>
 
                 <div class="rating-section-general">
                     <div class="rating-item">
-                        <label class="label">En general, ¿Cómo percibió el servicio prestado por el asesor inmobiliario de Century21?</label>
+                        <span class="rating-label">En general, ¿Cómo percibió el servicio prestado por el asesor inmobiliario de Century21?</span>
                         <div class="rating-buttons-word">
-                            <input type="radio" id="servicio_asesor1" name="servicio_asesor" value="1">
-                            <label for="servicio_asesor1">Excelente</label>
-                            <input type="radio" id="servicio_asesor2" name="servicio_asesor" value="2">
-                            <label for="servicio_asesor2">Muy Bueno</label>
-                            <input type="radio" id="servicio_asesor3" name="servicio_asesor" value="3">
-                            <label for="servicio_asesor3">Bueno</label>
-                            <input type="radio" id="servicio_asesor4" name="servicio_asesor" value="4">
-                            <label for="servicio_asesor4">Regular</label>
-                            <input type="radio" id="servicio_asesor5" name="servicio_asesor" value="5">
-                            <label for="servicio_asesor5">Deficiente</label>
+                            <input type="radio" id="oficina1" name="oficina" value="1">
+                            <label for="oficina1">Excelente</label>
+                            <input type="radio" id="oficina2" name="oficina" value="2">
+                            <label for="oficina2">Muy Bueno</label>
+                            <input type="radio" id="oficina3" name="oficina" value="3">
+                            <label for="oficina3">Bueno</label>
+                            <input type="radio" id="oficina4" name="oficina" value="4">
+                            <label for="oficina4">Regular</label>
+                            <input type="radio" id="oficina5" name="oficina" value="5">
+                            <label for="oficina5">Deficiente</label>
                         </div>
                     </div>
                 </div>
@@ -877,11 +761,11 @@
     <!-- Page 4: Office Quality -->
     <div class="page form-page" id="page4">
         <div class="form-container">
-            <h2><span class="page-number">3/3</span>Calidad de la Oficina</h2>
+            <h2>Calidad de la Oficina</h2>
             <form id="officeForm">
                 <div class="rating-section">
                     <div class="rating-item">
-                        <label>¿Cómo califica el servicio prestado por la oficina Century21?</label>
+                        <span class="rating-label">¿Cómo califica el servicio prestado por la oficina Century21?</span>
                         <div class="rating-buttons-word">
                             <input type="radio" id="oficina1" name="oficina" value="1">
                             <label for="oficina1">Excelente</label>
@@ -900,10 +784,14 @@
                 <div class="form-group">
                     <label>¿Recomendaría nuestros servicios a un amigo o familiar? *</label>
                     <div class="radio-group">
-                        <input type="radio" id="recomendar_si" name="recomendar" value="si" required>
-                        <label for="recomendar_si">Sí, lo recomendaría</label>
-                        <input type="radio" id="recomendar_no" name="recomendar" value="no" required>
-                        <label for="recomendar_no">No lo recomiendo</label>
+                        <label>
+                            <input type="radio" name="recomendar" value="si" required>
+                            Sí, lo recomendaría
+                        </label>
+                        <label>
+                            <input type="radio" name="recomendar" value="no" required>
+                            No lo recomiendo
+                        </label>
                     </div>
                     <span class="error" id="recomendarError">Por favor seleccione una opción</span>
                 </div>
@@ -928,9 +816,9 @@
 
                 <div class="form-group">
                     <label for="comentarios">Comentarios adicionales, preguntas, sugerencias (opcional)</label>
-                    <textarea id="comentarios" name="comentarios" placeholder="Comparta cualquier comentario adicional sobre su experiencia..." maxlength="500"></textarea>
-                    <span id="charCounter" style="font-size: 12px; color: #666;">500 caracteres restantes</span>
+                    <textarea id="comentarios" name="comentarios" placeholder="Comparta cualquier comentario adicional sobre su experiencia..."></textarea>
                 </div>
+                <span> 500 carácteres restantes</span>
             </form>
         </div>
         <div class="button-container">
@@ -944,16 +832,13 @@
 
     <!-- Page 5: Thank You -->
     <div class="page" id="page5">
-        <div class="content-wrapper">
-            <p class="subtitle5">ENCUESTA</p>
-            <h1>GRACIAS</h1>
-            <p class="description">Tu encuesta nos ayuda a brindar un mejor servicio a nuestros clientes</p>
-            <button class="btn-restart" onclick="resetSurvey()">VOLVER A EMPEZAR</button>
-            <p class="protected">Protegido</p>
-        </div>
-        <div class="footer">
+        <p class="subtitle">ENCUESTA</p>
+        <h1>Gracias</h1>
+        <p>Tu encuesta nos ayuda a brindar un mejor servicio a nuestros clientes.</p>
+        <button class="btn-restart" onclick="resetSurvey()">Volver a empezar</button>
+    <div class="form-footer">
             <img src="assets/images/Century21logo.png" alt="Century 21">
-        </div>
+    </div>
     </div>
 
     <script>
@@ -1040,15 +925,6 @@
                 }
                 ratings[category] = selectedRating.value;
             }
-            
-            // Validate servicio_asesor
-            const servicioAsesor = document.querySelector('input[name="servicio_asesor"]:checked');
-            if (!servicioAsesor) {
-                document.getElementById('ratingsError').style.display = 'block';
-                isValid = false;
-            } else {
-                ratings.servicio_asesor = servicioAsesor.value;
-            }
 
             if (isValid) {
                 surveyData.nombreAsesor = nombreAsesor;
@@ -1107,54 +983,9 @@
             showPage(1);
         }
 
-        // Function to populate agent dropdown from API
-        async function loadAgents() {
-            const selectElement = document.getElementById('nombreAsesor');
-            
-            // Example API call - replace with your actual API endpoint
-            try {
-                // const response = await fetch('/api/agents');
-                // const agents = await response.json();
-                
-                // For now, using sample data - replace with API response
-                const agents = [
-                    { id: 1, name: 'Juan Pérez' },
-                    { id: 2, name: 'María García' },
-                    { id: 3, name: 'Carlos López' }
-                ];
-                
-                // Clear existing options except the first one
-                selectElement.innerHTML = '<option value="">Seleccione un asesor</option>';
-                
-                // Add agents from API
-                agents.forEach(agent => {
-                    const option = document.createElement('option');
-                    option.value = agent.id;
-                    option.textContent = agent.name;
-                    selectElement.appendChild(option);
-                });
-            } catch (error) {
-                console.error('Error loading agents:', error);
-            }
-        }
-
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             showPage(1);
-            
-            // Load agents for dropdown
-            loadAgents();
-            
-            // Character counter for textarea
-            const textarea = document.getElementById('comentarios');
-            const charCounter = document.getElementById('charCounter');
-            
-            if (textarea && charCounter) {
-                textarea.addEventListener('input', function() {
-                    const remaining = 500 - this.value.length;
-                    charCounter.textContent = remaining + ' caracteres restantes';
-                });
-            }
         });
     </script>
 </body>
